@@ -60,7 +60,7 @@ response = client.do_action_with_exception(request)
 print response
 ```
 
-在创建 Client 实例时，您需要填写3个参数：Region ID、Access Key ID和Access Key Secret。Access Key ID和Access Key Secret可以从控制台获得；而 Region ID 可以从[地域列表](https://help.aliyun.com/document_detail/40654.html?spm=5176.doc52740.2.8.FogWrd) 中获得
+在创建 Client 实例时，您需要填写3个参数：Region ID、Access Key ID和Access Key Secret。Access Key ID和Access Key Secret可以从控制台获得；而 Region ID 可以从[地域列表](https://help.aliyun.com/document_detail/40654.html) 中获得
 
 ## HTTP DEBUG
 要使用HTTP DEBUG 功能，需要在您的环境变量配置`DEBUG`，其对应的值可以为`sdk`或`SDK`。
