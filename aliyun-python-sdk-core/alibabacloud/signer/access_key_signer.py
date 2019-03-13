@@ -20,13 +20,14 @@
 # under the License.
 
 import logging
-from aliyunsdkcore.auth.signers.signer import Signer
+from alibabacloud.signer.signer import Signer
+
 
 logger = logging.getLogger(__name__)
 
 
 class AccessKeySigner(Signer):
-    def __init__(self, access_key_credential, region_id=None, do_action_api=None, debug=None):
+    def __init__(self, access_key_credential):
         self._credential = access_key_credential
 
     def sign(self, region_id, request):

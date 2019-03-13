@@ -5,6 +5,19 @@ class AccessKeyCredential:
         self.access_key_secret = access_key_secret
 
 
+class BearTokenCredential:
+    def __init__(self, bearer_token):
+        self.bearer_token = bearer_token
+
+
+class SecurityCredential:
+    def __init__(self, access_key_id, access_key_secret, token):
+        self.access_key_id = access_key_id
+        self.access_key_secret = access_key_secret
+        self.token = token
+
+
+# for compat
 class StsTokenCredential:
     def __init__(self, sts_access_key_id, sts_access_key_secret, sts_token):
         self.sts_access_key_id = sts_access_key_id
@@ -23,11 +36,6 @@ class RamRoleArnCredential:
 class EcsRamRoleCredential:
     def __init__(self, role_name):
         self.role_name = role_name
-
-
-class BearTokenCredential:
-    def __init__(self, bearer_token):
-        self.bearer_token = bearer_token
 
 
 class RsaKeyPairCredential:
